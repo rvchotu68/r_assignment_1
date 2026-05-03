@@ -7,7 +7,7 @@ const userContext = createContext({
 
 export const ContextProvider = ({ children }) => {
   const initData = {
-    isUserLoggedIn: false,
+    isUserLoggedIn: true,
     username: "",
     role: "",
     avatar: "",

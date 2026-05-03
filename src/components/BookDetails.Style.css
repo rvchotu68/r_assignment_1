@@ -1,8 +1,6 @@
-.auth {
-  padding-top: 100px;
-}
-
 .progress {
+  font-size: 48px;
   color: red;
   border: 2px solid red;
+  padding: 4px;
 }
