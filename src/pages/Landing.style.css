@@ -1,0 +1,50 @@
+.landing {
+  position: relative;
+  height: 100vh;
+}
+
+.landing__data {
+  position: absolute;
+  transform: translate(150px, 200px);
+  width: 30%;
+}
+
+.landing__btn {
+  padding: 6px 10px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #e76f51;
+  border: 1px solid #f94144;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.landing__title {
+  font-size: 60px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.landing__title::after {
+  content: "";
+  position: absolute;
+  width: 135px;
+  height: 10px;
+  background-color: #e9c46a;
+  left: 2px;
+  top: 135px;
+}
+
+.landing__img {
+  height: 100%;
+
+  img {
+    object-fit: contain;
+    object-position: right;
+    width: 100%;
+    height: 95%;
+  }
+}

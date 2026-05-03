@@ -4,6 +4,8 @@ import Book from "./Book.Component.jsx";
 import Loader from "./Loader.Component.jsx";
 import Error from "./Error.Component.jsx";
 
+import "./Books.style.css";
+
 function Books() {
   const [books, setBooks] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -52,12 +54,14 @@ function Books() {
   if (isLoading) return <Loader />;
 
   return (
-    <section>
-      <h1>Books</h1>
+    <section className="container">
+      <h1 className="books__title">Books</h1>
 
-      {books.map((book) => {
-        return <Book key={book.id} book={book} />;
-      })}
+      <section className="books__container">
+        {books.map((book) => {
+          return <Book key={book.id} book={book} />;
+        })}
+      </section>
     </section>
   );
 }

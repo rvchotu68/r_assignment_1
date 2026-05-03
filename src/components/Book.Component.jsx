@@ -1,25 +1,50 @@
+import { Link } from "react-router-dom";
+
+import "./Book.style.css";
+
 function Book({ book }) {
   const { volumeInfo } = book;
   console.log(volumeInfo.imageLinks);
   return (
-    <div>
-      <img src={volumeInfo.imageLinks.thumbnail} />
-      <h2>{volumeInfo.title}</h2>
-      <h3>{volumeInfo.subtitle}</h3>
-      <p>
-        <span>Categories: </span>
-        {volumeInfo.categories.map((category) => {
-          return <span key={category}>{category}</span>;
-        })}
-      </p>
-      <p>
-        <span>Authors: </span>
-        {volumeInfo.authors.map((author) => {
-          return <span key={author}>{author}</span>;
-        })}
-      </p>
-      <p>Rating: {volumeInfo.averageRating}</p>
-    </div>
+    <section className="book">
+      <img
+        src={volumeInfo.imageLinks.smallThumbnail}
+        alt="book"
+        className="book__img"
+      />
+      <div className="book__data">
+        <Link className="book__title" to={`/books/${book.id}`}>
+          {volumeInfo.title}
+        </Link>
+        <h3 className="book__subtitle">{volumeInfo.subtitle || "subtitle"}</h3>
+        <p className="book__categories">
+          <span>Categories: </span>
+          {volumeInfo.categories.map((category) => {
+            return (
+              <span key={category} className="book__value">
+                {category}
+              </span>
+            );
+          })}
+        </p>
+        <p className="book__authors">
+          <span>Authors: </span>
+          {volumeInfo.authors.map((author) => {
+            return (
+              <span key={author} className="book__value">
+                {author},
+              </span>
+            );
+          })}
+        </p>
+        <p className="book__rating">
+          Rating:
+          <span className="book__value">
+            {volumeInfo.averageRating || "NA"}
+          </span>
+        </p>
+      </div>
+    </section>
   );
 }
 

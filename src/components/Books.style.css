@@ -1,0 +1,24 @@
+.container {
+  width: 100%;
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  padding: 20px;
+}
+
+.books__title {
+  text-align: center;
+  font-size: 48px;
+}
+
+.books__container {
+  /* background-color: rgba(155, 12, 23, 0.4); */
+  padding: 10px;
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(350px, 450px));
+  justify-content: center;
+  align-content: center;
+  gap: 20px;
+}
