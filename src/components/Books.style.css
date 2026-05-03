@@ -5,6 +5,7 @@
   flex-direction: column;
   row-gap: 50px;
   padding: 20px;
+  padding-top: 100px;
 }
 
 .books__title {

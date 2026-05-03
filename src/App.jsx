@@ -8,6 +8,7 @@ import Auth from "./pages/Auth.Page.jsx";
 import Login from "./components/Login.Component.jsx";
 import Register from "./components/Register.Component.jsx";
 import Header from "./components/Header.component.jsx";
+import Error from "./pages/Error.Page.jsx";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route index element={<Books />} />
           <Route path=":id" element={<BookDetails />} />
         </Route>
+        <Route path="*" element={<Error />} />
       </Routes>
     </>
   );

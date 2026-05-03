@@ -1,5 +1,5 @@
 function BookDetails() {
-  return <div>BookDetails</div>;
+  return <div>Work in Progress</div>;
 }
 
 export default BookDetails;

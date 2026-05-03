@@ -1,8 +1,10 @@
 import { Outlet } from "react-router-dom";
 
+import "./Auth.Style.css";
+
 function Auth() {
   return (
-    <section>
+    <section className="auth">
       <div>BookStore</div>
       <Outlet />
     </section>
